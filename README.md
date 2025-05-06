@@ -14,24 +14,27 @@ Both projects use PNPM for package management. Follow the steps below to get Inv
 1. [Prerequisites](#prerequisites)
 2. [Environment Variables](#environment-variables)
 3. [Docker & Database](#docker--database)
-4. [Server (NestJS) Setup](#server-nestjs-setup)
+4. [Root Directory Setup](#root-directory-setup)
     * [Install Dependencies](#install-dependencies)
+5. [Server (NestJS) Setup](#server-nestjs-setup)
+    * [Install Dependencies](#install-dependencies-1)
     * [Generate Prisma Client & Migrate](#generate-prisma-client--migrate)
     * [Seed the Database](#seed-the-database)
     * [Run the Server](#run-the-server)
     * [Run Server Tests](#run-server-tests)
-5. [Client (React) Setup](#client-react-setup)
-    * [Install Dependencies](#install-dependencies-1)
+6. [Client (React) Setup](#client-react-setup)
+    * [Install Dependencies](#install-dependencies-2)
     * [Run the Client](#run-the-client)
     * [Lint the Client](#lint-the-client)
-6. [Useful Scripts](#useful-scripts)
+7. [Useful Scripts](#useful-scripts)
+8. [Credentials](#credentials)
 
 ---
 
 ## Prerequisites
 
-* **Node.js** ≥ 18
-* **PNPM** ≥ 7 (`npm install -g pnpm`)
+* **Node.js** >= 18
+* **PNPM** >= 7 (`npm install -g pnpm`)
 * **Docker** & **Docker Compose**
 * **Git**
 
@@ -90,6 +93,14 @@ services:
 
 volumes:
   db_data:
+```
+
+## Root Directory Setup
+
+### Install Dependencies
+
+```bash
+pnpm install
 ```
 
 ---
@@ -201,3 +212,12 @@ pnpm lint
 | `pnpm build`   | Build for production                   |
 | `pnpm preview` | Preview the production build           |
 | `pnpm lint`    | Run ESLint                             |
+
+## Credentials
+
+Use the following credentials to log in to the app:
+
+```bash
+Email: demo@altametrics.com
+Password: password123
+```
