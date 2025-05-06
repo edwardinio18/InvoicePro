@@ -82,7 +82,7 @@ describe('InvoicesService', () => {
   describe('findOne', () => {
     it('should return an invoice by id', async () => {
       const service = {
-        findOne: (): Promise<Invoice> => mockInvoice,
+        findOne: () => mockInvoice,
       };
 
       const result = await service.findOne(1);
@@ -92,7 +92,9 @@ describe('InvoicesService', () => {
     it('should throw NotFoundException if invoice not found', async () => {
       const service = {
         findOne: (id: number): Promise<Invoice> => {
-          throw new NotFoundException(`Invoice with id ${id} not found`);
+          return Promise.reject(
+            new NotFoundException(`Invoice with id ${id} not found`),
+          );
         },
       };
 

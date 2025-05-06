@@ -11,23 +11,50 @@ Both projects use PNPM for package management. Follow the steps below to get Inv
 
 ## Table of Contents
 
-1. [Prerequisites](#prerequisites)
-2. [Environment Variables](#environment-variables)
-3. [Docker & Database](#docker--database)
-4. [Root Directory Setup](#root-directory-setup)
+1. [Preview](#preview)
+2. [Prerequisites](#prerequisites)
+3. [Environment Variables](#environment-variables)
+4. [Docker & Database](#docker--database)
+5. [Root Directory Setup](#root-directory-setup)
     * [Install Dependencies](#install-dependencies)
-5. [Server (NestJS) Setup](#server-nestjs-setup)
+6. [Server (NestJS) Setup](#server-nestjs-setup)
     * [Install Dependencies](#install-dependencies-1)
     * [Generate Prisma Client & Migrate](#generate-prisma-client--migrate)
     * [Seed the Database](#seed-the-database)
     * [Run the Server](#run-the-server)
     * [Run Server Tests](#run-server-tests)
-6. [Client (React) Setup](#client-react-setup)
+7. [Client (React) Setup](#client-react-setup)
     * [Install Dependencies](#install-dependencies-2)
     * [Run the Client](#run-the-client)
-    * [Lint the Client](#lint-the-client)
-7. [Useful Scripts](#useful-scripts)
 8. [Credentials](#credentials)
+
+---
+
+## Preview
+
+#### Login Page
+
+![Login Page](assets/login_screen.png)  
+*The sleek login interface ensures quick and secure access to your InvoicePro account, with clear prompts and validation
+feedback.*
+
+#### Dashboard
+
+![Dashboard](assets/dashboard_screen.png)  
+*An at-a-glance dashboard showing total invoices, outstanding balances, and recent activity—designed to help you stay on
+top of your cash flow.*
+
+#### Invoices Page
+
+![Invoice Page](assets/invoices_screen.png)  
+*A detailed list view with sortable columns, status badges, and filtering controls so you can efficiently review and
+manage every invoice.*
+
+#### Invoice Modal
+
+![Invoice Modal](assets/invoice_modal.png)  
+*An intuitive modal for creating or editing invoices, featuring form validation, date pickers, and a live preview of key
+invoice details.*
 
 ---
 
@@ -138,29 +165,12 @@ Development mode (with live reload):
 pnpm start:dev
 ```
 
-Production build & start:
-
-```bash
-pnpm build
-pnpm start:prod
-```
-
 The API will be available at `http://localhost:3000`.
 
 ### Run Server Tests
 
 ```bash
-# Unit & integration tests
 pnpm test
-
-# Watch mode
-pnpm test:watch
-
-# Coverage report
-pnpm test:cov
-
-# E2E tests
-pnpm test:e2e
 ```
 
 ---
@@ -182,36 +192,7 @@ pnpm dev
 
 Visit `http://localhost:5173` (default Vite port).
 
-### Lint the Client
-
-```bash
-pnpm lint
-```
-
 ---
-
-## Useful Scripts
-
-### Server (`server/package.json`)
-
-| Script             | Description                  |
-|--------------------|------------------------------|
-| `pnpm start:dev`   | Run Nest in watch mode       |
-| `pnpm build`       | Compile for production       |
-| `pnpm start:prod`  | Start compiled server        |
-| `pnpm prisma:seed` | Seed the database            |
-| `pnpm test`        | Run unit & integration tests |
-| `pnpm test:e2e`    | Run end-to-end tests         |
-| `pnpm lint`        | Run ESLint fixes             |
-
-### Client (`client/package.json`)
-
-| Script         | Description                            |
-|----------------|----------------------------------------|
-| `pnpm dev`     | Run Vite dev server (`localhost:5173`) |
-| `pnpm build`   | Build for production                   |
-| `pnpm preview` | Preview the production build           |
-| `pnpm lint`    | Run ESLint                             |
 
 ## Credentials
 
